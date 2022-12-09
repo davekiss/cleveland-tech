@@ -13,4 +13,6 @@ Powers the Slack invitations to the Cleveland Tech Slack workspace.
 
 ## Logo rights
 
+The Cleveland Script logo is the trademark of the Conventions and Visitors Bureau of Greater Cleveland and is used with permission.
+
 https://www.thisiscleveland.com/legal/trademark-and-brand-policy
