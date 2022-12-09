@@ -11,6 +11,10 @@ Powers the Slack invitations to the Cleveland Tech Slack workspace.
 - Copy `.env.example` to `.env.local`
 - Run `yarn dev` and visit the resulting url
 
+## Why Svelte?
+
+I dunno, I wanted to try it out and had a free hour.
+
 ## Logo rights
 
 The Cleveland Script logo is the trademark of the Conventions and Visitors Bureau of Greater Cleveland and is used with permission.
