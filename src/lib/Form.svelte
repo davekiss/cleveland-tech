@@ -10,7 +10,7 @@
     doRecaptcha();
   }
 
-  const key = process.env.VITE_RECAPTCHA_SITE_KEY;
+  const key = envVars.VITE_RECAPTCHA_SITE_KEY;
   let State = {
     idle: "idle",
     requesting: "requesting",
@@ -25,7 +25,7 @@
         state = State.success;
         token = t;
 
-        fetch(process.env.VITE_FORM_ENDPOINT, {
+        fetch(envVars.VITE_FORM_ENDPOINT, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
