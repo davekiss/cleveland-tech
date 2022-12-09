@@ -62,7 +62,7 @@
   <label for="hometown">Hometown</label>
   <input type="text" bind:value={hometown} />
 
-  <button disabled={!name} type="submit"> Request invite </button>
+  <button disabled={!name} type="submit"> Get invite </button>
 </form>
 
 <style>
