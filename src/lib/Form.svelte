@@ -36,6 +36,15 @@
             token,
             hometown,
           }),
+        }).then((res) => {
+          if (res.ok) {
+            state = State.success;
+            name = "";
+            email = "";
+            hometown = "";
+          } else {
+            state = State.idle;
+          }
         });
       });
     });
@@ -62,7 +71,15 @@
   <label for="hometown">Hometown</label>
   <input type="text" bind:value={hometown} />
 
-  <button disabled={!name} type="submit"> Get invite </button>
+  <button disabled={!name} type="submit"
+    >{state === State.requesting ? "Loading…" : "Get invite"}</button
+  >
+  <div
+    class="success"
+    style="display: {state === State.success ? 'block' : 'none'}"
+  >
+    <p>Thanks for signing up! Check your email for your invite.</p>
+  </div>
 </form>
 
 <style>
