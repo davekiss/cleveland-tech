@@ -16,15 +16,12 @@
     requesting: "requesting",
     success: "success",
   };
-  let token;
+
   let state = State.idle;
 
   function doRecaptcha() {
     grecaptcha.ready(function () {
-      grecaptcha.execute(key, { action: "submit" }).then(function (t) {
-        state = State.success;
-        token = t;
-
+      grecaptcha.execute(key, { action: "submit" }).then(function (token) {
         fetch(envVars.VITE_FORM_ENDPOINT, {
           method: "POST",
           headers: {
